@@ -22,6 +22,8 @@ public class Mars {
             System.out.println("Error! Flight plan already set. Landing on the plain");
         }
         landing= landingCheck(100);
+        new GuessingGame();
+        new MarsExpedition();
     }
     public static boolean landingCheck(int loop) throws InterruptedException {
         for (int i = 0; i <=loop ; i++) {
