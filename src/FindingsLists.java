@@ -1,12 +1,13 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Scanner;
 
 public class FindingsLists {
     public FindingsLists() throws InterruptedException {
-    Thread.sleep(500);
 
-    System.out.println();
+        Thread.sleep(500);
+        System.out.println();
 
     ArrayList<String> rockList = new ArrayList<String>();
         System.out.println("Rock data downloaded");
@@ -25,7 +26,7 @@ public class FindingsLists {
 
         Thread.sleep(500);
 
-        HashMap<String, String> fossilDirectory = new HashMap<>();
+        HashMap<String, String> fossilDirectory = new HashMap<String, String>();
         System.out.println("Fossil data downloaded");
 
         fossilDirectory.put("Bird Fossil", "The fossil has wings implying it as capable of flight ");
@@ -44,9 +45,17 @@ public class FindingsLists {
         } else if (fossilChoice.equalsIgnoreCase("Tooth Fossil")){
             System.out.println("Fossil: " + fossilChoice + "\nDescription: " + fossilDirectory.get(fossilChoice));
         }
+    Thread.sleep(500);
 
+        HashSet<String> suppliesBrought = new HashSet<>();
+        HashSet<String> suppliesUsed = new HashSet<>();
 
+        suppliesBrought.add("Food");
+        suppliesBrought.add("Water");
+        suppliesBrought.add("Medicine");
 
-
+        suppliesUsed.add("Food");
+        suppliesUsed.add("Water");
+        System.out.println("Medicine");
     }
 }
